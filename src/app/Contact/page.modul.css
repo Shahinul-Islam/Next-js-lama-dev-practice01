@@ -1,0 +1,12 @@
+#contact-image{
+    animation: move 3s alternate  infinite ease-in ;
+}
+@keyframes move {
+    from{
+        transform: translateY(-15px);
+    }
+    to{
+        transform: translateY(0px);
+        transform: scale(1.03);
+    }
+}

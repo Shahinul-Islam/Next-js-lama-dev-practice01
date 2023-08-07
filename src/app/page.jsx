@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -8,15 +9,17 @@ export default function Home() {
 					<h1 className="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-pink-400 to-pink-700 bg-clip-text text-transparent">
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 					</h1>
-					<p className="my-5">
+					<p className="my-5 text-sm">
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto quod
 						quis nesciunt enim ex inventore vel dicta exercitationem. Iusto,
 						fugit quod. Placeat, iusto assumenda! Nulla accusamus ipsum a!
 						Laudantium nam exercitationem, quae dolorum et fugit!
 					</p>
-					<button className="px-3 py-1 text-sm bg-pink-500 text-pink-200 rounded">
-						Our Works
-					</button>
+					<Link href="/Portfolio">
+						<button className="px-3 py-1 text-sm bg-pink-500 text-pink-200 rounded">
+							Our Works
+						</button>
+					</Link>
 				</div>
 				<div>
 					<Image
@@ -24,6 +27,7 @@ export default function Home() {
 						alt="hero image"
 						width={500}
 						height={270}
+						id="contact-image"
 					/>
 				</div>
 			</div>
