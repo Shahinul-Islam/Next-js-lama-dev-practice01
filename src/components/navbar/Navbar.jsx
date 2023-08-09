@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 
 const Navbar = () => {
 	const links = [
@@ -11,11 +12,12 @@ const Navbar = () => {
 		{ id: 6, title: "Contact", url: "/Contact" },
 	];
 	return (
-		<div className="flex justify-between items-center mx-10 my-6">
+		<div className="flex justify-between items-center mx-10 py-6">
 			<Link href="/" className="text-3xl font-bold text-pink-500">
 				EarnNext
 			</Link>
-			<div>
+			<div className="flex items-center">
+				<DarkModeToggle />
 				{links.map((link) => (
 					<Link className="mx-2 p-1 text-sm" href={link.url} key={link.id}>
 						{link.title}
