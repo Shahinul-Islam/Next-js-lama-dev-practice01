@@ -1,42 +1,35 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { resolve } from "styled-jsx/css";
+import useSWR from "swr";
 
-const dashboard = async () => {
-	const [data, setData] = useState([]);
-	const [err, setErr] = useState(false);
-	const [loading, setLoading] = useState(false);
-
-	useEffect(() => {
-		setLoading(true);
-		fetch("https://jsonplaceholder.typicode.com/posts")
-			.then((res) => res.json())
-			.then((data) => setData(data));
-		setLoading(false);
-		// const getData = async () => {
-		// 	setLoading(true);
-		// 	const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-		// 	if (!res.ok) {
-		// 		setErr(true);
-		// 	}
-		// 	setData(res.json());
-		// 	setLoading(false);
-		// };
-		// getData();
-
-		// const myData = await getData();
-	}, []);
+const dashboard = () => {
+	const fetcher = (...args) => fetch(...args).then((res) => res.json());
+	const { data, error, isLoading } = useSWR(
+		"https://jsonplaceholder.typicode.com/posts",
+		fetcher
+	);
 	console.log(data);
 
-	return (
+	return isLoading ? (
 		<div className="min-h-screen">
-			<h2>this is dashboard page</h2>
-			<div>
-				{data.map((item, index) => {
-					<p>{item.title}</p>;
-				})}
-			</div>
+			<Image
+				alt="loader"
+				height={110}
+				width={110}
+				src="/loader.svg"
+				className=" mx-auto mt-[210px]"
+			/>
 		</div>
+	) : (
+		<>
+			<div className="min-h-screen">
+				<h2>this is dashboard page</h2>
+				<div>
+					{data && data?.map((item, index) => <p key={index}>{item.title}</p>)}
+				</div>
+			</div>
+		</>
 	);
 };
 

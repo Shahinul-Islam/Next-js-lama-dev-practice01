@@ -1,0 +1,92 @@
+export const myData = {
+	applications: [
+		{
+			id: 1,
+			desc: "Abrasion of unspecified elbow, subsequent encounter",
+			title: "DSE",
+			gender: "Male",
+			image: "https://picsum.photos/id/141/200/300",
+		},
+		{
+			id: 2,
+			desc: "Type 1 diab with mod nonp rtnop with macular edema, r eye",
+			title: "YDT",
+			gender: "Female",
+			image: "https://picsum.photos/id/92/200/300",
+		},
+		{
+			id: 3,
+			desc: "Unsp abnormal finding in specmn from female genital organs",
+			title: "IJU",
+			gender: "Female",
+			image: "https://picsum.photos/id/3/200/300",
+		},
+	],
+	illustrations: [
+		{
+			id: 4,
+			desc: "Unsp fracture of lower end of left tibia, init for clos fx",
+			title: "SAP",
+			gender: "Female",
+			image: "https://picsum.photos/id/42/200/300",
+		},
+		{
+			id: 5,
+			desc: "Salter-Harris Type II physeal fracture of left metatarsal",
+			title: "SFO",
+			gender: "Male",
+			image: "https://picsum.photos/id/35/200/300",
+		},
+		{
+			id: 6,
+			desc: "Nondisp fx of low epiphy (separation) of r femr, 7thD",
+			title: "SNP",
+			gender: "Female",
+			image: "https://picsum.photos/id/60/200/300",
+		},
+	],
+	websites: [
+		{
+			id: 7,
+			desc: "Injury of radial nerve at forearm level",
+			title: "PGI",
+			gender: "Female",
+			image: "https://picsum.photos/id/75/200/300",
+		},
+		{
+			id: 8,
+			desc: "Person outside car injured in collision w van in traf, subs",
+			title: "JPA",
+			gender: "Male",
+			image: "https://picsum.photos/id/86/200/300",
+		},
+		{
+			id: 9,
+			desc: "Snow-skier colliding with stationary object",
+			title: "KMI",
+			gender: "Female",
+			image: "https://picsum.photos/id/39/200/300",
+		},
+		{
+			id: 10,
+			desc: "Inj to rider of recreatl wtrcrft puld beh oth wtrcrft, subs",
+			title: "SKS",
+			gender: "Male",
+			image: "https://picsum.photos/id/10/200/300",
+		},
+		{
+			id: 11,
+			desc: "Rupture in Descemet's membrane, left eye",
+			title: "UCT",
+			gender: "Female",
+			image: "https://picsum.photos/id/111/200/300",
+		},
+		{
+			id: 12,
+			desc: "Bitten by rat, initial encounter",
+			title: "UYN",
+			gender: "Female",
+			image: "https://picsum.photos/id/121/200/300",
+		},
+	],
+};
