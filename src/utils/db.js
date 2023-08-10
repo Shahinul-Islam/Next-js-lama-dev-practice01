@@ -1,13 +1,15 @@
-const { mongoose } = require("mongoose");
+const { default: mongoose } = require("mongoose");
 
-// mongoose.connect("mongodb://username:password@host:port/database?options...");
-
-const connect = async () => {
+const connection = async () => {
 	try {
-		await mongoose.connect(process.env.MONGO);
+		await mongoose.connect(
+			"mongodb+srv://lama-dev:qCEmDdXLxOwp3kdx@cluster0.kdwgcoc.mongodb.net/lama-dev?retryWrites=true&w=majority"
+		);
+		console.log("successfully connected to the database");
 	} catch (error) {
-		throw new Error("Failed to connect to the database");
+		throw new Error("Connection Failed");
 	}
 };
+connection();
 
-export default connect;
+export default connection;
